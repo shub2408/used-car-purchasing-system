@@ -77,7 +77,10 @@ WSGI_APPLICATION = 'car.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'crazywheels_db',
+        'USER': 'postgres',
+        'PASSWORD': 'Shubham@123',
+        'HOST': 'localhost',
     }
 }
 
@@ -126,3 +129,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Media settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
